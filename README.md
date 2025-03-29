@@ -12,6 +12,7 @@
 - Python 3.8 이상
 - Jupyter Notebook 또는 JupyterLab
 - Make (Makefile 사용 시)
+- OpenAI API 키
 
 ### 설치 과정
 
@@ -83,7 +84,7 @@ cp .env.example .env
 
 ## OpenAI API 모델 설정
 
-이 프로젝트는 OpenAI API를 사용합니다. 기본적으로 다음과 같은 모델을 지원합니다:
+이 프로젝트는 OpenAI API를 사용합니다. 다음과 같은 모델을 지원합니다:
 
 - 기본 모델: `gpt-4o`
 - 대체 모델: `gpt-4o-mini`, `gpt-3.5-turbo`
@@ -97,6 +98,7 @@ cp .env.example .env
 - OpenAI API 키가 유효한지 확인
 - API 사용량 한도를 초과하지 않았는지 확인
 - `.env` 파일에서 모델명을 제대로 설정했는지 확인
+- OpenAI 계정에서 해당 모델 사용 권한이 있는지 확인
 
 ## Jupyter 설정
 
@@ -129,10 +131,12 @@ prompting-tutorials/
 └── notebooks/                 # 실습용 주피터 노트북
     ├── 01_zero_shot.ipynb     # 제로샷 프롬프팅
     ├── 02_few_shot.ipynb      # 퓨샷 프롬프팅
-    ├── 03_chain_of_thought.ipynb # 사고 연쇄 프롬프팅
-    ├── 04_self_consistency.ipynb # 자기 일관성
-    ├── 05_rag.ipynb           # 검색 증강 생성
-    └── 06_react.ipynb         # ReAct 기법
+    ├── 03_chain_of_thought.ipynb # Chain of Thought 프롬프팅
+    ├── 04_self_consistency.ipynb # 자기 일관성 프롬프팅
+    ├── 05_knowledge.ipynb     # 지식 기반 프롬프팅
+    ├── 06_prompt_chaining.ipynb # 프롬프트 체이닝
+    ├── 07_rag.ipynb          # Retrieval Augmented Generation
+    └── 08_react.ipynb        # ReAct (Reasoning+Acting)
 ```
 
 ## 시작하기
@@ -155,10 +159,11 @@ Jupyter 노트북에서 "Kernel does not exist" 오류가 발생하면:
 
 ### OpenAI API 오류
 API 관련 오류가 발생하면:
-1. Billing 설정 되어있는지 확인합니다. 무료 분량이 있더라도 Billing 설정을 하지 않으면 API가 동작하지 않아요.
+1. OpenAI 계정에서 Billing 설정이 되어있는지 확인합니다. 무료 크레딧이 있더라도 결제 정보를 등록하지 않으면 API가 동작하지 않습니다.
 2. `.env` 파일의 API 키가 올바른지 확인합니다.
-3. 모델명이 올바른지 확인합니다 (예: `gpt-4o-mini`, `gpt-3.5-turbo`).
-4. API 사용량 한도를 확인합니다.
+3. 모델명이 올바른지 확인합니다 (예: `gpt-4o`, `gpt-4o-mini`).
+4. API 사용량 한도와 남은 크레딧을 확인합니다.
+5. API 요청 시 발생하는 구체적인 에러 메시지를 확인합니다.
 
 ## 유지보수
 
@@ -169,4 +174,4 @@ make clean
 
 ## 라이센스
 
-MIT 라이센스로 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요. 
+이 프로젝트는 MIT 라이센스로 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요. 

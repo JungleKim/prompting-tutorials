@@ -6,7 +6,7 @@ import os
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
 from openai import OpenAI
-from log import log_interaction
+from .log import log_interaction
 
 # 기본 모델 설정
 DEFAULT_MODEL = "gpt-4o"

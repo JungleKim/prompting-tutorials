@@ -2,6 +2,7 @@
 import json
 import time
 import tiktoken
+import os
 
 
 def count_tokens(text: str, model: str = "gpt-3.5-turbo") -> int:
