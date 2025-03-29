@@ -6,15 +6,6 @@
 
 대규모 언어 모델(LLM)의 성능은 프롬프트의 품질에 크게 의존합니다. 이 프로젝트에서는 다양한 프롬프트 엔지니어링 기법을 통해 LLM과 더 효과적으로 상호작용하는 방법을 배울 수 있습니다.
 
-### 다루는 주요 기법
-
-- 제로샷 프롬프팅 (Zero-shot Prompting)
-- 퓨샷 프롬프팅 (Few-shot Prompting)
-- 사고 연쇄 프롬프팅 (Chain-of-Thought Prompting)
-- 자기 일관성 (Self-Consistency)
-- 검색 증강 생성 (Retrieval Augmented Generation)
-- ReAct 기법
-
 ## 설치 방법
 
 ### 필수 요구사항
