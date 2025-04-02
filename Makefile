@@ -11,11 +11,6 @@ PIP := pip
 VENV := venv
 VENV_ACTIVATE := $(VENV)/bin/activate
 
-# 주요 실행 명령어
-JUPYTER_LAB := jupyter lab
-JUPYTER_CONFIG := jupyter_notebook_config.py
-JUPYTER_HOME := ~/.jupyter
-
 # 도움말
 help:
 	@echo "프롬프트 엔지니어링 실습 프로젝트 Makefile"
@@ -61,7 +56,7 @@ setup:
 # JupyterLab 실행
 run:
 	@echo "JupyterLab 실행 중..."
-	@$(JUPYTER_LAB) --config=$(JUPYTER_CONFIG)
+	jupyter lab
 
 # 프로젝트 정리
 clean:

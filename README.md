@@ -100,23 +100,6 @@ cp .env.example .env
 - `.env` 파일에서 모델명을 제대로 설정했는지 확인
 - OpenAI 계정에서 해당 모델 사용 권한이 있는지 확인
 
-## Jupyter 설정
-
-프로젝트에는 사용자 정의 Jupyter 설정이 포함되어 있습니다:
-
-- `jupyter_notebook_config.py`: 기본 Jupyter 설정 파일
-
-이 설정 파일을 사용하려면:
-
-```bash
-# 다음 명령어로 주피터 노트북 실행 시 자동으로 설정 적용
-jupyter notebook --config=jupyter_notebook_config.py
-
-# 또는 다음 명령어로 Jupyter 설정 디렉토리에 복사
-mkdir -p ~/.jupyter
-cp jupyter_notebook_config.py ~/.jupyter/
-```
-
 ## 프로젝트 구조
 
 ```
