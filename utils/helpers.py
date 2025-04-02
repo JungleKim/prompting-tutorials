@@ -5,7 +5,7 @@
 import os
 from typing import Dict, List, Optional
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI 
 from .log import log_interaction
 
 # 기본 모델 설정
@@ -159,8 +159,6 @@ def get_chat_completion(
                 max_tokens=max_tokens
             )
         return error_msg
-
-
 
 def create_few_shot_prompt(
     instruction: str,
