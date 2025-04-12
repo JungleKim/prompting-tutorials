@@ -2,14 +2,15 @@
 
 # 기본 명령어
 help:
-	@echo "MCP 보일러플레이트 애플리케이션"
+	@echo "커머스 데이터 분석 애플리케이션"
 	@echo ""
 	@echo "사용 가능한 명령어:"
-	@echo "  make setup    - 프로젝트 환경 설정 (uv 설치 및 가상환경 생성)"
-	@echo "  make install  - 필요한 의존성 설치 (pyproject.toml 기반)"
-	@echo "  make run      - 애플리케이션 실행"
-	@echo "  make clean    - 임시 파일 및 가상환경 제거"
-	@echo "  make mcpconfig - 현재 경로 기반 MCP 설정 JSON 출력 (SSE 기반)"
+	@echo "  make setup      - 프로젝트 환경 설정 (uv 설치 및 가상환경 생성)"
+	@echo "  make install    - 필요한 의존성 설치 (pyproject.toml 기반)"
+	@echo "  make run        - 애플리케이션 실행"
+	@echo "  make run-client - 애플리케이션 클라이언트 실행"
+	@echo "  make clean      - 임시 파일 및 가상환경 제거"
+	@echo "  make mcpconfig  - 현재 경로 기반 MCP 설정 JSON 출력 (SSE 기반)"
 	@echo ""
 
 # 환경 설정
@@ -41,8 +42,12 @@ venv:
 
 # 애플리케이션 실행
 run:
-	@echo "MCP 보일러플레이트 애플리케이션 실행 중..."
+	@echo "커머스 데이터 분석 애플리케이션 실행 중..."
 	. .venv/bin/activate && python -m src.main
+
+run-client:
+	@echo "커머스 데이터 분석 애플리케이션 클라이언트 실행 중..."
+	. .venv/bin/activate && python -m src.client
 
 # MCP 설정 JSON 출력
 mcpconfig:
