@@ -17,4 +17,4 @@ mcp.prompt()(get_formatted_prompt)
 
 if __name__ == "__main__":
     # Initialize and run the server
-    mcp.run(transport='sse', host='127.0.0.1', port=8000)
+    mcp.run(transport='sse')
