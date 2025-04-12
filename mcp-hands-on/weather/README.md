@@ -44,6 +44,31 @@ uv add "mcp[cli]" httpx
 python main.py
 ```
 
+### MCP 설정 JSON 출력
+```bash
+# 현재 경로 기반 MCP 설정 JSON 출력
+make mcpconfig
+```
+
+출력되는 JSON은 다음과 같은 형식을 가집니다:
+```json
+{
+    "mcpServers": {
+        "weather": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/ABSOLUTE/PATH/TO/CURRENT/FOLDER",
+                "run",
+                "weather.py"
+            ]
+        }
+    }
+}
+```
+
+이 설정은 MCP를 통해 날씨 서비스에 연결할 때 사용할 수 있습니다.
+
 ## 사용 예시
 
 ```python

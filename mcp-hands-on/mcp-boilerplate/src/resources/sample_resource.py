@@ -15,16 +15,6 @@ SAMPLE_DATA = {
     }
 }
 
-async def get_sample_resource() -> str:
-    """
-    샘플 리소스 데이터를 가져옵니다.
-    
-    Returns:
-        형식화된 리소스 데이터 문자열
-    """
-    # JSON 형식으로 변환 (필요시 다른 형식으로 변경 가능)
-    return json.dumps(SAMPLE_DATA, ensure_ascii=False, indent=2)
-
 async def get_resource_by_id(resource_id: str) -> Dict[str, Any]:
     """
     ID로 리소스를 가져오는 예제 함수입니다.

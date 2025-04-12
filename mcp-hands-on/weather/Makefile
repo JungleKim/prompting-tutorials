@@ -1,4 +1,4 @@
-.PHONY: setup venv install clean run help
+.PHONY: setup venv install clean run help mcpconfig
 
 # 기본 명령어
 help:
@@ -9,6 +9,7 @@ help:
 	@echo "  make install  - 필요한 의존성 설치 (pyproject.toml 기반)"
 	@echo "  make run      - 애플리케이션 실행"
 	@echo "  make clean    - 임시 파일 및 가상환경 제거"
+	@echo "  make mcpconfig - 현재 경로 기반 MCP 설정 JSON 출력"
 	@echo ""
 
 # 환경 설정
@@ -42,6 +43,23 @@ venv:
 run:
 	@echo "날씨 애플리케이션 실행 중..."
 	. .venv/bin/activate && python main.py
+
+# MCP 설정 JSON 출력
+mcpconfig:
+	@CURRENT_DIR=$$(pwd); \
+	echo '{'; \
+	echo '    "mcpServers": {'; \
+	echo '        "weather": {'; \
+	echo '            "command": "uv",'; \
+	echo '            "args": ['; \
+	echo '                "--directory",'; \
+	echo '                "'$$CURRENT_DIR'",'; \
+	echo '                "run",'; \
+	echo '                "main.py"'; \
+	echo '            ]'; \
+	echo '        }'; \
+	echo '    }'; \
+	echo '}'
 
 # 정리
 clean:

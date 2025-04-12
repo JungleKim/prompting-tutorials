@@ -1,4 +1,4 @@
-.PHONY: setup venv install clean run help
+.PHONY: setup venv install clean run help mcpconfig
 
 # 기본 명령어
 help:
@@ -9,6 +9,7 @@ help:
 	@echo "  make install  - 필요한 의존성 설치 (pyproject.toml 기반)"
 	@echo "  make run      - 애플리케이션 실행"
 	@echo "  make clean    - 임시 파일 및 가상환경 제거"
+	@echo "  make mcpconfig - 현재 경로 기반 MCP 설정 JSON 출력 (SSE 기반)"
 	@echo ""
 
 # 환경 설정
@@ -42,6 +43,17 @@ venv:
 run:
 	@echo "MCP 보일러플레이트 애플리케이션 실행 중..."
 	. .venv/bin/activate && python -m src.main
+
+# MCP 설정 JSON 출력
+mcpconfig:
+	@echo '{'; \
+	echo '    "mcpServers": {'; \
+	echo '        "mcp-boilerplate": {'; \
+	echo '            "url": "http://127.0.0.1:8000/sse",'; \
+	echo '            "transport": "sse"'; \
+	echo '        }'; \
+	echo '    }'; \
+	echo '}'
 
 # 정리
 clean:
