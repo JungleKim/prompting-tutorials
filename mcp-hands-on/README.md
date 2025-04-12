@@ -16,7 +16,7 @@ Model Context Protocol(MCP)은 대규모 언어 모델(LLM)이 외부 도구와 
 - 미국 주별 날씨 경보 조회 (`get_alerts`)
 - 위도/경도 기반 날씨 예보 조회 (`get_forecast`)
 
-[날씨 애플리케이션 바로가기](/weather)
+[날씨 애플리케이션 바로가기](/mcp-hands-on/weather)
 
 ### 2. 커머스 데이터 분석 애플리케이션 (`/commerce-analytics`)
 
@@ -29,7 +29,7 @@ Model Context Protocol(MCP)은 대규모 언어 모델(LLM)이 외부 도구와 
 - SQL 쿼리 실행 및 시각화
 - 데이터 기반 리포트 생성
 
-[커머스 데이터 분석 애플리케이션 바로가기](/commerce-analytics)
+[커머스 데이터 분석 애플리케이션 바로가기](/mcp-hands-on/commerce-analytics)
 
 ## 시작하기
 
