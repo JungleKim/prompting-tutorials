@@ -1,0 +1,20 @@
+# 프롬프팅 튜토리얼 (Prompting Tutorials)
+
+프롬프트 엔지니어링 기법과 Model Context Protocol(MCP)을 학습하고 실습할 수 있는 튜토리얼 프로젝트입니다.
+
+## 프로젝트 개요
+
+이 저장소는 두 가지 주요 튜토리얼을 포함하고 있습니다:
+
+1. **[프롬프트 엔지니어링 가이드](/prompting-guide)**: 다양한 프롬프팅 기법을 실습할 수 있는 주피터 노트북 기반 튜토리얼 
+   - [프롬프트 엔지니어링 가이드 README](/prompting-guide/README.md)
+2. **[MCP 핸즈온 워크샵](/mcp-hands-on)**: Model Context Protocol을 활용한 실용적인 애플리케이션 예제
+   - [MCP 핸즈온 워크샵 README](/mcp-hands-on/README.md)
+
+## 시작하기
+
+각 튜토리얼 디렉토리에는 자체 README와 설정 가이드가 포함되어 있습니다. 해당 디렉토리로 이동하여 지침을 따르세요.
+
+## 라이센스
+
+이 프로젝트는 MIT 라이센스로 배포됩니다. 자세한 내용은 LICENSE 파일을 참조하세요.
