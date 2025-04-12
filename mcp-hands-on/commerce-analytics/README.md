@@ -79,9 +79,10 @@ make run
 ```
 
 ### 클라이언트 테스트
+- MCP Resources, Prompts를 지원하는 MCP Host가 많지 않기 때문에 client 테스트로 대체합니다.
 ```bash
 # 클라이언트 테스트 실행
-python -m src.client
+make run-client
 ```
 
 ## 한글 지원 및 폰트 설정
