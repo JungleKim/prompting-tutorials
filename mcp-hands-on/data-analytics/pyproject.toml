@@ -1,11 +1,10 @@
 [project]
-name = "mcp-boilerplate"
+name = "data-analytics"
 version = "0.1.0"
-description = "MCP 보일러플레이트 프로젝트"
+description = "데이터 분석 도구를 제공하는 MCP 서버"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "httpx>=0.28.1",
     "mcp[cli]>=1.6.0",
     "fastmcp>=1.0.0",
 ]

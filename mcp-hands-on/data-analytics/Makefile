@@ -48,7 +48,7 @@ run:
 mcpconfig:
 	@echo '{'; \
 	echo '    "mcpServers": {'; \
-	echo '        "mcp-boilerplate": {'; \
+	echo '        "data-analytics": {'; \
 	echo '            "url": "http://127.0.0.1:8000/sse",'; \
 	echo '            "transport": "sse"'; \
 	echo '        }'; \
