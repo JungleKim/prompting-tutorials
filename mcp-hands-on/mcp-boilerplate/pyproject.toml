@@ -1,0 +1,13 @@
+[project]
+name = "mcp-boilerplate"
+version = "0.1.0"
+description = "MCP 보일러플레이트 프로젝트"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0",
+]
+
+[tool.setuptools]
+packages = ["src"] 
